@@ -1,0 +1,209 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shutter Gallery</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        
+body {
+    margin: 0;
+    background: #000;
+    font-family: Arial, sans-serif;
+}
+
+.photo {
+    position: relative;
+    height: 280px;
+    overflow: hidden;
+}
+
+.photo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: 0.4s;
+}
+
+.overlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.65);
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    opacity: 0;
+    transition: 0.4s;
+}
+
+.overlay h5 {
+    font-size: 16px;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.overlay p {
+    font-size: 12px;
+    margin: 0;
+}
+
+.photo:hover .overlay {
+    opacity: 1;
+}
+
+.photo:hover img {
+    transform: scale(1.06);
+}
+
+/* Sidebar */
+.sidebar {
+    background: #000;
+    color: white;
+    min-height: 100vh;
+    padding: 35px 15px;
+    text-align: right;
+}
+
+.sidebar h4 {
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 40px;
+}
+
+.sidebar nav a {
+    display: block;
+    color: white;
+    text-decoration: none;
+    font-size: 12px;
+    margin: 0 0 22px;
+    transition: 0.3s;
+}
+
+.sidebar nav a:hover,
+.sidebar nav .active {
+    color: tomato;
+}
+
+.social {
+    display: flex;
+    justify-content: flex-end;
+    gap: 18px;
+    margin-top: 55px;
+}
+
+.social a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+/* Mobile */
+@media (max-width: 767px) {
+    .sidebar {
+        order: -1;
+        min-height: auto;
+        text-align: center;
+        padding: 20px 10px;
+    }
+
+    .sidebar h4 {
+        margin-bottom: 20px;
+    }
+
+    .sidebar nav {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 15px;
+    }
+
+    .sidebar nav a {
+        margin: 0;
+    }
+
+    .social {
+        justify-content: center;
+        margin-top: 20px;
+    }
+
+    .photo {
+        height: 220px;
+    }
+}
+
+    </style>
+</head>
+<body>
+
+<div class="container-fluid">
+    <div class="row">
+
+<div class="col-lg-10 col-md-9 p-0">
+    <div class="row g-2">
+        <div class="col-md-8">
+            <div class="photo">
+                <img src="avif.4.avif" alt="Surfing"><div class="overlay"><h5>Photos Title Here</h5><p>42 PHOTOS</p></div></div></div>
+        <div class="col-md-4">
+            <div class="photo">
+                <img src="avif.5.avif" alt="Nature"><div class="overlay"><h5>Photos Title Here</h5><p>42 PHOTOS</p></div></div></div>
+        <div class="col-md-3">
+            <div class="photo">
+                <img src="phots.avif" alt="Portrait"><div class="overlay"><h5>Photos Title Here</h5><p>42 PHOTOS</p></div></div></div>
+        <div class="col-md-6">
+            <div class="photo">
+                <img src="phts.avif" alt="Forest"><div class="overlay"><h5>Photos Title Here</h5><p>42 PHOTOS</p></div></div></div>
+        <div class="col-md-3">
+            <div class="photo">
+                <img src="avif.3.avif" alt="People"><div class="overlay"><h5>Photos Title Here</h5><p>42 PHOTOS</p></div></div></div>
+        <div class="col-md-6">
+            <div class="photo">
+                <img src="avif.6.avif" alt="Ocean"><div class="overlay"><h5>Photos Title Here</h5><p>42 PHOTOS</p></div></div></div>
+        <div class="col-md-6">
+            <div class="photo">
+                <img src="avif.7.avif" alt="Landscape"><div class="overlay"><h5>Photos Title Here</h5><p>42 PHOTOS</p></div></div></div>
+        <div class="col-md-4">
+            <div class="photo">
+                <img src="avif.8.avif" alt="Mountains"><div class="overlay"><h5>Photos Title Here</h5><p>42 PHOTOS</p></div></div></div>
+        <div class="col-md-8">
+            <div class="photo">
+                <img src="avif.9.avif" alt="Hills"><div class="overlay"><h5>Photos Title Here</h5><p>42 PHOTOS</p></div></div></div>
+                <div class="col-md-3">
+            <div class="photo">
+                <img src="avif.3.avif" alt="Portrait"><div class="overlay"><h5>Photos Title Here</h5><p>42 PHOTOS</p></div></div></div>
+        <div class="col-md-6">
+            <div class="photo">
+                <img src="avif.10.avif" alt="Forest"><div class="overlay"><h5>Photos Title Here</h5><p>42 PHOTOS</p></div></div></div>
+        <div class="col-md-3">
+            <div class="photo">
+                <img src="phts.avif" alt="People"><div class="overlay"><h5>Photos Title Here</h5><p>42 PHOTOS</p></div></div></div>
+        
+    </div>           
+</div>
+        <div class="col-lg-2 col-md-3 sidebar">
+            <h4>SHUTTER</h4>
+            <nav>
+                <a class="active" href="#">HOME</a>
+                <a href="#">PHOTOS</a>
+                <a href="#">BIO</a>
+                <a href="#">BLOG</a>
+                <a href="#">CONTACT</a>
+            </nav>
+            <div class="social">
+                <a href="#">f</a>
+                <a href="#">♥</a>
+                <a href="#">◎</a>
+                <a href="#">♪</a>
+            </div>
+        </div>
+
+    </div>
+</body>
+</html>
